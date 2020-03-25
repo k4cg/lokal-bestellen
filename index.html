@@ -57,9 +57,11 @@
         }).addTo(mymap);
 
         function inP(text) {
-            return "<p>" + text + "</p>";
+            if(text) {
+                return "<p>" + text + "</p>";
+            }
+            return "";
         }
-
 
         function onEachFeature(feature, layer) {
             var popupContent = "<p><b>" + feature.properties.name + "</b><p>";
@@ -73,10 +75,11 @@
             layer.bindPopup(popupContent);
         }
 
-        L.geoJSON(data, {
+        let points = L.geoJSON(data, {
             onEachFeature: onEachFeature,
         }).addTo(mymap);
-
+        mymap.fitBounds(points.getBounds());
+        
     </script>
 
 
