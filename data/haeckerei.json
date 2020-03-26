@@ -1,0 +1,21 @@
+
+{
+    "type": "Feature",
+    "properties": {
+        "name": "Häckerei",
+        "amenity": "haeckerei",
+        "description": "Wir liefern nix, wir holen nur.",
+        "address": "Am Ende der Welt 12",
+        "phone": "0911 543 21",
+        "mail": "do-not-reply@example.com",
+        "webseite": "example.com"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+            11.280840,
+            49.549080
+        ]
+    }
+}
+
