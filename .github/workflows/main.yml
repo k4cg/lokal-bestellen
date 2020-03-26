@@ -17,11 +17,12 @@ jobs:
         uses: actions/setup-python@v1.2.0
       
       - name: Concatenate Json with Python
-        run: python -c "import sys; print(sys.version)"
-
+        run: python build/aggregate-json.py
+      
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: . # The folder the action should deploy.
+          DEBUG: true
