@@ -15,4 +15,3 @@ with open('data.js', 'w') as outfile:
         outfile.write(",")
     outfile.write("{}]; \n")
     print("Everything is aggregated in " + outfile.name);
-    outfile.close
