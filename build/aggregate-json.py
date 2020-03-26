@@ -12,6 +12,7 @@ with open('data.js', 'w') as outfile:
         with open(path_to_json + fname) as infile:
             for line in infile:
                 outfile.write(line)
-
-    outfile.write("]; \n")
-    print("Everything is aggregated in " + outfile.name); 
+        outfile.write(",")
+    outfile.write("{}]; \n")
+    print("Everything is aggregated in " + outfile.name);
+    outfile.close
