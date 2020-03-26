@@ -14,3 +14,4 @@ with open('data.js', 'w') as outfile:
                 outfile.write(line)
 
     outfile.write("]; \n")
+    print("Everything is aggregated in " + outfile.name); 
